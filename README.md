@@ -62,10 +62,10 @@ So that I have control over how many events are displayed.
 
 **Scenarios**
 
-*Scenario 1: When user hasn’t specified a number of events, 12 is the default number.*
+*Scenario 1: When user hasn’t specified a number of events, 32 is the default number.*
 - **Given** the user has not specified a number of events in a city;
 - **When** the user selects a city to view events;
-- **Then** the default number will be 12.
+- **Then** the default number will be 32.
 
 *Scenario 2: User can change the number of events they want to see.*
 - **Given** the user wants to view a specific number of events; 
@@ -92,7 +92,7 @@ So that I can view event information when there is no internet connection.
 - **When** the user accesses the app;
 - **Then** a message should appear informing them they are in offline mode.
 
-*Scenario 3: Show and error message when user changes settings when there is no internet connection.*
+*Scenario 3: Show an error message when user changes settings when there is no internet connection.*
 - **Given** the user has changed the settings in the app in offline mode;
 - **When** the user confirms changes on the settings screen;
 - **Then** an error message should inform the user that the changes cannot be made in offline mode.
