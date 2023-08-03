@@ -126,3 +126,8 @@ So that I can have a visual representation of events and their details.
 - **Given** the user has not selected a city;
 - **When** the user wants to compare events between cities;
 - **Then** they should be able to access a chart with the number of upcoming events in each city.
+
+
+## Using Serverless Technology
+
+The meet app incorporates serverless functions to enable app scalability, user authentication, event recommendations, real-time data visualization, and event notifications. The app is able to effectively manage the backend processes and deliver a personalized user experience thanks to this serverless technology.
