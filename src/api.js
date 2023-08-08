@@ -15,7 +15,7 @@ const checkToken = async (accessToken) => {
 export const getEvents = async () => {
     if (window.location.href.startsWith("http://localhost")) {
         return mockData;
-    };
+    }
 
     const token = await getAccessToken();
 
@@ -53,7 +53,6 @@ const getToken = async (code) => {
 export const getAccessToken = async () => {
 
     const accessToken = localStorage.getItem("access_token");
-
     const tokenCheck = accessToken && (await checkToken(accessToken));
 
     if (!accessToken || tokenCheck.error) {
@@ -66,7 +65,7 @@ export const getAccessToken = async () => {
             const { authUrl } = result;
             return (window.location.href = authUrl);
         }
-        return code && getAccessToken(code);
+        return code && getToken(code);
     }
     return accessToken;
 };
