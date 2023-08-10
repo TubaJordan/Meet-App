@@ -6,7 +6,7 @@ describe("<NumberOfEvents /> Component", () => {
 
     let NumberOfEventsComponent;
     beforeEach(() => {
-        NumberOfEventsComponent = render(<NumberOfEvents />);
+        NumberOfEventsComponent = render(<NumberOfEvents setCurrentNOE={() => { }} />);
     });
 
 

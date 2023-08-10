@@ -13,9 +13,9 @@ const checkToken = async (accessToken) => {
 };
 
 export const getEvents = async () => {
-    // if (window.location.href.startsWith("http://localhost")) {
-    //     return mockData;
-    // }
+    if (window.location.href.startsWith("http://localhost")) {
+        return mockData;
+    }
 
     const token = await getAccessToken();
 
@@ -25,10 +25,8 @@ export const getEvents = async () => {
         const response = await fetch(url);
         const result = await response.json();
 
-        console.log("RESULT", result);
-
         if (result) {
-            return result.events;
+            return result.data.items;
         } else return null;
     }
 };
@@ -48,11 +46,6 @@ const getToken = async (code) => {
     const encodeCode = encodeURIComponent(code);
     const response = await fetch("https://pmeaxtp8a5.execute-api.us-west-1.amazonaws.com/dev/api/token" + "/" + encodeCode);
     const { access_token } = await response.json();
-
-    console.log("encodeCode", encodeCode);
-    console.log("response", response);
-    console.log("Access token", access_token);
-    console.log("GET TOKEN", getToken);
 
     access_token && localStorage.setItem("access_token", access_token);
 
