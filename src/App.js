@@ -41,9 +41,17 @@ const App = () => {
 
   return (
     <div className="App">
-      <NumberOfEvents setCurrentNOE={setCurrentNOE} />
-      <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} />
+
+
+      <div className="logo-container">
+        <p className="logo">Meet App</p>
+        <div className="city-events">
+          <CitySearch allLocations={allLocations} setCurrentCity={setCurrentCity} className="city-search-bar" />
+          <NumberOfEvents setCurrentNOE={setCurrentNOE} className="number-of-events-bar" />
+        </div>
+      </div>
       <EventList events={events} />
+
     </div>
   );
 };

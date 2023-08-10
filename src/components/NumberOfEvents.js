@@ -8,7 +8,21 @@ const NumberOfEvents = ({ setCurrentNOE }) => {
 
     return (
         <div id="number-of-events">
-            <input type="text" defaultValue="32" onChange={handleInputChanged}></input>
+
+            <label htmlFor="number-of-events-input" id="number-of-events-input-label" className="event-number">Number of Events to Display: </label>
+
+            <input
+                type="number"
+                defaultValue="32"
+                onChange={handleInputChanged}
+                placeholder="Enter a number"
+                className="event-number-container"
+                min="1"
+                max="99"
+                step="1"
+            >
+
+            </input>
         </div>
     );
 };
