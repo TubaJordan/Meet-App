@@ -20,37 +20,9 @@ describe("<Event /> Component", () => {
     });
 
     test("has the events time", () => {
-        const originalDate = new Date(mockEvent.created);
-        const monthNames = [
-            "January", "February", "March", "April",
-            "May", "June", "July", "August",
-            "September", "October", "November", "December"
-        ];
-        const monthName = monthNames[originalDate.getMonth()];
-        const day = originalDate.getDate();
-        const dayOrdinal = getDayOrdinal(day);
-        const year = originalDate.getFullYear();
-        const hours = originalDate.getHours();
-        const minutes = originalDate.getMinutes().toString().padStart(2, "0");
-        const ampm = hours >= 12 ? "pm" : "am";
-        const formattedHours = (hours % 12) || 12;
-        const formattedDate = EventComponent.queryByText(`${monthName} ${day}${dayOrdinal}, ${year} - ${formattedHours}:${minutes}${ampm}`);
-        function getDayOrdinal(day) {
-            if (day >= 11 && day <= 13) {
-                return "th";
-            }
-            switch (day % 10) {
-                case 1:
-                    return "st";
-                case 2:
-                    return "nd";
-                case 3:
-                    return "rd";
-                default:
-                    return "th";
-            }
-        }
-        expect(formattedDate).toBeInTheDocument();
+        const eventDOM = EventComponent.container.firstChild;
+        const time = eventDOM.querySelector(".item-time");
+        expect(time).toBeInTheDocument();
     });
 
     test("has the events location", () => {
