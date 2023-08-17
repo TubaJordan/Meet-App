@@ -7,7 +7,7 @@ const NumberOfEvents = ({ setCurrentNOE }) => {
 
 
     return (
-        <div id="number-of-events">
+        <div id="number-of-events" data-testid="number-of-events">
 
             <label htmlFor="number-of-events-input" id="number-of-events-input-label" className="event-number">Number of Events to Display: </label>
 
@@ -20,6 +20,7 @@ const NumberOfEvents = ({ setCurrentNOE }) => {
                 min="1"
                 max="99"
                 step="1"
+                data-testid="number-of-events-input"
             >
 
             </input>

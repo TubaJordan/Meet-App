@@ -3,7 +3,7 @@ import { render, within, waitFor } from "@testing-library/react";
 import App from "../App";
 import { getEvents } from "../api";
 import userEvent from "@testing-library/user-event";
-import CitySearch from "../components/CitySearch";
+
 
 const feature = loadFeature("./src/features/filterEventsByCity.feature");
 
