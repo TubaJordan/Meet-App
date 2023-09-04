@@ -1,9 +1,20 @@
-const NumberOfEvents = ({ setCurrentNOE }) => {
+const NumberOfEvents = ({ setCurrentNOE, setErrorAlert }) => {
 
     const handleInputChanged = (event) => {
         const value = event.target.value;
-        setCurrentNOE(value);
+
+        if (isNaN(value)) {
+            setErrorAlert("value is not a number");
+        } else if (value > 99) {
+            setErrorAlert("Maximum value is 99");
+        } else if (value <= 0) {
+            setErrorAlert("Minimum value is 1");
+        } else {
+            setErrorAlert("");
+            setCurrentNOE(value);
+        }
     }
+
 
 
     return (

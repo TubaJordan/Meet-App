@@ -1,12 +1,6 @@
 import puppeteer from "puppeteer";
 
 
-// describe("filer events by city", () => {
-
-// })
-
-
-
 describe("show/hide an event details", () => {
 
     let browser;
