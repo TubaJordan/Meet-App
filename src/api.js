@@ -17,10 +17,10 @@ export const getEvents = async () => {
         return mockData;
     }
 
-    // if (!navigator.online) {
-    //     const events = localStorage.getItem("lastEvents");
-    //     return events ? JSON.parse(events) : [];
-    // }
+    if (!navigator.online) { //problem
+        const events = localStorage.getItem("lastEvents");
+        return events ? JSON.parse(events) : [];
+    }
 
     const token = await getAccessToken();
 
@@ -31,7 +31,7 @@ export const getEvents = async () => {
         const result = await response.json();
 
         if (result) {
-            // localStorage.setItem("lastEvents", JSON.stringify(result.data.items)); 
+            localStorage.setItem("lastEvents", JSON.stringify(result.data.items)); //problem
             return result.data.items;
         } else return null;
     }
