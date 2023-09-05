@@ -17,7 +17,7 @@ export const getEvents = async () => {
         return mockData;
     }
 
-    if (!navigator.online) { //problem
+    if (!navigator.onLine) { //problem
         const events = localStorage.getItem("lastEvents");
         return events ? JSON.parse(events) : [];
     }
