@@ -31,7 +31,7 @@ export const getEvents = async () => {
         const result = await response.json();
 
         if (result) {
-            localStorage.setItem("lastEvents", JSON.stringify(result.data.items)); //for offline cache
+            // localStorage.setItem("lastEvents", JSON.stringify(result.data.items)); 
             return result.data.items;
         } else return null;
     }
