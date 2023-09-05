@@ -17,10 +17,10 @@ export const getEvents = async () => {
         return mockData;
     }
 
-    if (!navigator.online) {
-        const events = localStorage.getItem("lastEvents");
-        return events ? JSON.parse(events) : [];
-    }
+    // if (!navigator.online) {
+    //     const events = localStorage.getItem("lastEvents");
+    //     return events ? JSON.parse(events) : [];
+    // }
 
     const token = await getAccessToken();
 
