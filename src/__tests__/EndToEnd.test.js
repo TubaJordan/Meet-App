@@ -12,7 +12,7 @@ describe("show/hide an event details", () => {
             timeout: 0
         });
         page = await browser.newPage();
-        await page.goto("http://localhost:3000/");
+        await page.goto(`http://localhost:3000/`);
         await page.waitForSelector(".event-item");
     });
 
