@@ -9,6 +9,7 @@ import { extractLocations, getEvents } from "./api";
 import { InfoAlert, ErrorAlert, WarningAlert } from "./components/Alert";
 
 import './App.css';
+import CityEventsChart from "./components/CityEventsChart";
 
 
 const App = () => {
@@ -70,6 +71,7 @@ const App = () => {
           <NumberOfEvents setCurrentNOE={setCurrentNOE} setErrorAlert={setErrorAlert} className="number-of-events-bar" />
         </div>
       </div>
+      <CityEventsChart allLocations={allLocations} events={events} />
       <EventList events={events} />
 
     </div>
