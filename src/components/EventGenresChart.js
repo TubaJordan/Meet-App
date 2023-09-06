@@ -38,9 +38,10 @@ const EventGenresChart = ({ events }) => {
                 y={y}
                 fill="#1a3847"
                 textAnchor={x > cx ? 'start' : 'end'}
-                dominantBaseline="central">
+                dominantBaseline="central"
+            >
                 {`${genres[index]} ${(percent * 100).toFixed(0)}%`}
-            </text>
+            </text >
         ) : null;
     };
 
@@ -53,13 +54,13 @@ const EventGenresChart = ({ events }) => {
                     fill="#8884d8"
                     labelLine={false}
                     label={renderCustomizedLabel}
-                    outerRadius={160}>
+                    outerRadius={140}>
 
                     {data.map((entry, index) => (
                         <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
                     ))}
                 </Pie>
-                <Legend verticalAlign="bottom" align="center" height={6} />
+                <Legend verticalAlign="bottom" align="center" height={40} />
                 <Tooltip cursor={{ strokeDasharray: "3 3" }} />
             </PieChart>
         </ResponsiveContainer>
