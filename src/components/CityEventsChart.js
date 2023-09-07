@@ -20,7 +20,7 @@ const CityEventsChart = ({ allLocations, events }) => {
         return data;
     };
 
-    console.log("what is this:", data);
+    console.log("Data prop:", data);
 
     return (
         <ResponsiveContainer width="99%" height={400}>
@@ -37,6 +37,9 @@ const CityEventsChart = ({ allLocations, events }) => {
                 <YAxis type="number" dataKey="count" name="Number of Events" allowDecimals={false} />
                 <Tooltip cursor={{ strokeDasharray: '3 3' }} />
                 <Scatter name="A school" data={data} fill="#CF5436" />
+
+                {console.log("Scatter Data:", data)}
+
             </ScatterChart>
         </ResponsiveContainer>
     );
