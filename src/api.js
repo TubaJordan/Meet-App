@@ -13,9 +13,9 @@ const checkToken = async (accessToken) => {
 };
 
 export const getEvents = async () => {
-    // if (window.location.href.startsWith("http://localhost")) {
-    //     return mockData;
-    // }
+    if (window.location.href.startsWith("http://localhost")) {
+        return mockData;
+    }
 
     if (!navigator.onLine) {
         const events = localStorage.getItem("lastEvents");

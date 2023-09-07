@@ -18,8 +18,6 @@ const EventGenresChart = ({ events }) => {
         return data;
     }
 
-
-
     const renderCustomizedLabel = ({
         cx,
         cy,
