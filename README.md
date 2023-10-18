@@ -1,133 +1,76 @@
-# Meet App
+# Meet App 📅
 
-## Features, User Stories, and BDD Scenarios
+**Meet App** is a React-based application that enables users to explore, filter, and visualize upcoming events in various cities. With an intuitive interface, users can personalize their event viewing experience and derive insights through data visualization.
 
-### Feature 1: Filter Events By City
+## Table of Contents
+- [Features](#-features)
+- [Technology Stack](#️-technology-stack)
+- [Getting Started](#-getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Charts](#-charts)
+- [Configuration & Deployment](#️-configuration--deployment)
+- [Contributing](#-contributing)
+- [Links](#-links)
+- [License](#-license)
 
-**User story**
+## 🌟 Features
 
-As a user 
-I should be able to filter events by city 
-So that I can see the list of events that take place in that city.
+### 1. Filter Events By City
+Allows users to conveniently search and list events in their preferred city.
 
-**Scenarios**
+### 2. Show/Hide Event Details
+Toggle event details for a concise or in-depth view.
 
-*Scenario 1: When user hasn't searched for a city, show upcoming events from all cities.*
-- **Given** user hasn’t searched for any city; 
-- **When** the user opens the app;
-- **Then** the user should see a list of all upcoming events.
+### 3. Specify Number of Events
+Users have the flexibility to decide the number of events they want to view.
 
-*Scenario 2: User should see a list of suggestions when they search for a city.*
-- **Given** the main page is open;
-- **When** user starts typing in the city textbox;
-- **Then** the user should see a list of cities (suggestions) that match what they’ve typed.
+### 4. Offline Usability
+Ensures that users can access event details even without an internet connection.
 
-*Scenario 3: User can select a city from the suggested list.*
-- **Given** the user was typing “Phoenix” in the city textbox and the list of suggested cities is showing; 
-- **When** the user selects a city (e.g., “Phoenix, Arizona”) from the list; 
-- **Then** their city should be changed to that city (i.e., “Phoenix, Arizona”) And the list of suggestions should disappear, and the user should receive a list of upcoming events in that city.
- 
-### Feature 2: Show/Hide Events Details
+### 5. Home Screen App Shortcut
+Facilitates quick access by allowing users to add the app shortcut to their home screen.
 
-**User Story**
+### 6. Data Visualization
+Interactive charts provide a visual representation of event distributions and details.
 
-As a user 
-I should be able to show and hide events details 
-So that I can get additional information about specific events.
+## 🛠️ Technology Stack
 
-**Scenarios**
+- React ^18.2.0
+- Workbox for efficient caching and offline capabilities
+- Recharts for data visualization
+- Atatus-SPA for performance monitoring
 
-*Scenario 1: Event details are hidden by default.*
-- **Given** the user has not yet selected an event;
-- **When** the user opens the app and performs no interaction;
-- **Then** the events details should be hidden by default.
+## 🔧 Getting Started
 
-*Scenario 2: User can open an event to see event specific details.*
-- **Given** the user has chosen an event;
-- **When** the user clicks on the selected event;
-- **Then** the events details are opened and displayed.
+### Prerequisites
+Ensure you have Node.js and npm installed.
 
-*Scenario 3: User can close an events details to return to original state.*
-- **Given** the user has opened an events details; 
-- **When** the user clicks on the event;
-- **Then** the event will close and hide the events details.
- 
-### Feature 3: Specify Number of Events
+### Installation
+1. Clone the repository: `git clone https://github.com/TubaJordan/meet.git`
+2. Navigate to the project directory: `cd meet`
+3. Install dependencies: `npm install`
+4. Start the development server: `npm start`
 
-**User Story**
+## 📈 Charts
 
-As a user 
-I should be able to specify the number of events to display 
-So that I have control over how many events are displayed.
+Incorporated visual charts include:
+- **Event Genres Chart**: Visualize the diversity of event genres.
+- **City Events Chart**: Compare event distributions across cities.
 
-**Scenarios**
+## ⚙️ Configuration & Deployment
 
-*Scenario 1: When user hasn’t specified a number of events, 32 is the default number.*
-- **Given** the user has not specified a number of events in a city;
-- **When** the user selects a city to view events;
-- **Then** the default number will be 32.
+The application can be deployed using GitHub Pages. Before deployment, run the build script with `npm run build` followed by `npm run deploy`.
 
-*Scenario 2: User can change the number of events they want to see.*
-- **Given** the user wants to view a specific number of events; 
-- **When** the user wants to change how many events are displayed; 
-- **Then** the user should be able to change how many events are displayed.
- 
-### Feature 4: Use the App When Offline
+## 🤝 Contributing
 
-**User Story**
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-As a user 
-I should be able to use the app when offline 
-So that I can view event information when there is no internet connection.
+## 🔗 Links
 
-**Scenarios**
+- [Live Demo](https://TubaJordan.github.io/meet)
+- [Source Code](https://github.com/TubaJordan/meet)
 
-*Scenario 1: Show stored data when there is no internet connection.*
-- **Given** the user has no internet connection;
-- **When** the user accesses the app;
-- **Then** the stored data within the app should still be available.
+## 📜 License
 
-*Scenario 2: Present a message that the app is in offline mode.*
-- **Given** the user has no internet connection;
-- **When** the user accesses the app;
-- **Then** a message should appear informing them they are in offline mode.
-
-*Scenario 3: Show an error message when user changes settings when there is no internet connection.*
-- **Given** the user has changed the settings in the app in offline mode;
-- **When** the user confirms changes on the settings screen;
-- **Then** an error message should inform the user that the changes cannot be made in offline mode.
- 
-### Feature 5: Add an App Shortcut to the Home Screen
-
-**User Story**
-
-As a user 
-I should be able to add an app shortcut to my home screen
-So that I can access the app in the future.
-
-**Scenarios**
-
-*Scenario 1: User can install the meet app as a shortcut on their device home screen (user OS dependent).*
-- **Given** the user has not added the app to their home screen; 
-- **When** the user wants to add the app to their home screen;
-- **Then** they should be able to add the app to their home screen.
- 
-### Feature 6: Display Charts Visualizing Event Details
-
-**User Story**
-
-As a user 
-I should be able to view a chart displaying event details
-So that I can have a visual representation of events and their details.
-
-**Scenarios**
-
-*Scenario 1: Show a chart with the number of upcoming events in each city.*
-- **Given** the user has not selected a city;
-- **When** the user wants to compare events between cities;
-- **Then** they should be able to access a chart with the number of upcoming events in each city.
-
-
-## Using Serverless Technology
-
-The meet app incorporates serverless functions to enable app scalability, user authentication, event recommendations, real-time data visualization, and event notifications. The app is able to effectively manage the backend processes and deliver a personalized user experience thanks to this serverless technology.
+This project is licensed under the MIT License.
