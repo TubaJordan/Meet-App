@@ -2,6 +2,8 @@
 
 **Meet App** is a React-based application that enables users to explore, filter, and visualize upcoming events in various cities. With an intuitive interface, users can personalize their event viewing experience and derive insights through data visualization.
 
+<img src="https://github.com/TubaJordan/Portfolio/blob/main/images/Meet-App-Display.png">
+
 ## Table of Contents
 - [Features](#-features)
 - [Technology Stack](#️-technology-stack)
