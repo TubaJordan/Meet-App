@@ -1,4 +1,4 @@
-# Meet App 📅
+# Meet App
 
 <img src="https://github.com/TubaJordan/Portfolio/blob/main/images/Meet-App-Display.png">
 
