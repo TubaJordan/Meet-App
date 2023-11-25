@@ -6,12 +6,12 @@
 
 - [Overview](#overview)
 - [Features](#features)
-- [Technology Stack](#️technology-stack)
+- [Technology Stack](#technology-stack)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Charts](#charts)
-- [Configuration & Deployment](#️configuration-for-deployment)
+- [Configuration](#configuration)
 - [Live Demo](#live-demo)
 - [License](#license)
 
@@ -72,7 +72,7 @@ Incorporated visual charts include:
 - **Event Genres Chart**: Visualize the diversity of event genres.
 - **City Events Chart**: Compare event distributions across cities.
 
-## Configuration for Deployment
+## Configuration
 
 The application can be deployed using GitHub Pages. Before deployment, run the build script with `npm run build` followed by `npm run deploy`.
 
